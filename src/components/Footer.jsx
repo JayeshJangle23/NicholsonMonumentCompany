@@ -1,0 +1,39 @@
+import React from "react"
+import Logo from "./Logo";
+
+export default function Footer() {
+  return (
+    <footer className="footer">
+      <div className="footer-main">
+        <Logo compact />
+        <div className="footer-quote">
+          <strong>Our Family Serving Yours Since 1956</strong>
+          <p>
+            “Wherever a beautiful soul has been, there is a trail of beautiful
+            memories.”
+          </p>
+          <small>— Ronald Reagan</small>
+        </div>
+        <div className="footer-links">
+          <a href="#information">Information</a>
+          <a href="#design">Design galleries</a>
+          <a href="#about">Our story</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div className="footer-contact">
+          <a href="tel:+15803237513">(580) 323-7513</a>
+          <a href="mailto:nicholsonmonument@sbcglobal.net">Email our team</a>
+          <span>Clinton · Hobart · Hennessey, OK</span>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <span>
+          © {new Date().getFullYear()} Nicholson Monument Company. All rights
+          reserved.
+        </span>
+        <span>Crafted with care. Remembered for generations.</span>
+        <a href="#home">Back to top ↑</a>
+      </div>
+    </footer>
+  );
+}
