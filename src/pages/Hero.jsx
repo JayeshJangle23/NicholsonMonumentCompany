@@ -103,14 +103,15 @@ export default function Hero() {
           <br className="desktop-only" /> there is a trail of beautiful
           memories.”<cite>— Ronald Reagan</cite>
         </blockquote>
-        <a className="btn btn--gold" href="#information">
-          Explore Our Services <ArrowRight size={17} />
+        <a className="btn btn--gold" href="/information">
+          <span className="btn__text">Explore Our Services</span>
+          <ArrowRight size={17} />
         </a>
-        <span className="hero-caption">
+        {/* <span className="hero-caption">
           {videoError
             ? "A story shaped by generations"
             : "Scroll to experience our story"}
-        </span>
+        </span> */}
       </div>
       <div className="hero-scroll">
         <span />

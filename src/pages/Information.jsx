@@ -104,7 +104,7 @@ export default function Information () {
               </li>
             ))}
           </ul>
-          <a className="btn btn--outline" href="#contact">
+          <a className="btn btn--outline" href="/contact">
             Ask us a question <ArrowRight size={16} />
           </a>
         </div>

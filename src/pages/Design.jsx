@@ -31,7 +31,7 @@ export default function Design() {
             <br />
             <em>Make its tribute personal.</em>
           </h2>
-          <p>
+          <p className="design-intro">
             Explore a selection of memorial styles and possibilities. Each
             design can be tailored with meaningful details.
           </p>

@@ -61,7 +61,7 @@ export default function Contact() {
             <span className="office-label">Main office</span>
             <h3>Clinton, Oklahoma</h3>
             <p>
-              <MapPin size={17} />
+              <MapPin size={18} />
               638 N. 6th St.
               <br />
               <span className="indent">Clinton, OK 73601</span>

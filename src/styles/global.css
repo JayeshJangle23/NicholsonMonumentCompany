@@ -62,7 +62,7 @@ img {
   justify-content: center;
   gap: 13px;
   padding: 0 5%;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.06em;
 }
 .topbar i {
@@ -71,7 +71,7 @@ img {
   background: #8f7656;
 }
 .topbar b {
-  font-weight: 500;
+  font-weight: 800;
   color: var(--accent-2);
 }
 .topbar-contact {
@@ -107,9 +107,9 @@ img {
 }
 .brand-logo {
   display: block;
-  height: 51px;      /* Matches your original .brand-mark height */
-  width: auto;       /* Preserves your image's natural aspect ratio */
-  max-width: 265px;  /* Matches the total width of icon + text */
+  height: 70px; /* Matches your original .brand-mark height */
+  width: auto; /* Preserves your image's natural aspect ratio */
+  max-width: 265px; /* Matches the total width of icon + text */
   object-fit: contain;
 }
 
@@ -419,7 +419,7 @@ img {
 
 /* Optional: slightly smaller scale for the footer when compact={true} */
 .brand--compact .brand-logo {
-  height: 44px;
+  height: 80px;
   max-width: 230px;
 }
 .brand-mark {
@@ -473,7 +473,7 @@ img {
   align-items: center;
   gap: 8px;
   color: var(--ink);
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: 0.02em;
   transition: color 0.2s;
@@ -492,13 +492,13 @@ img {
 .theme-trigger {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 10px;
   background: transparent;
   border: 1px solid var(--line);
   border-radius: 3px;
   padding: 11px 14px;
   color: var(--ink);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
 }
 .theme-trigger:hover {
@@ -647,8 +647,9 @@ img {
   align-items: center;
   justify-content: center;
   gap: 18px;
-  padding: 14px 21px;
+  padding: 14px 30px;
   border: 1px solid transparent;
+  border-radius: 30px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 10px;
@@ -658,6 +659,12 @@ img {
     background 0.2s,
     color 0.2s,
     border 0.2s;
+}
+.btn__text {
+  display: inline-block;
+  /* Optical fix: uppercase text often sits slightly high; 
+     1px top padding centers it better against icons */
+  padding-top: 1px;
 }
 .btn:hover {
   transform: translateY(-3px);
@@ -752,6 +759,7 @@ img {
 .section-heading .eyebrow,
 .contact-heading .eyebrow {
   justify-content: center;
+  font-size: 15px;
 }
 .section h2 {
   font: 600 clamp(38px, 4.5vw, 58px)/0.98 var(--serif);
@@ -766,7 +774,7 @@ img {
 }
 .section-heading > p,
 .contact-heading > p {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.8;
   color: var(--muted);
 }
@@ -796,13 +804,13 @@ img {
 .prepared h3,
 .services-heading h3,
 .final-dates h3 {
-  font: 600 28px/1.05 var(--serif);
+  font: 900 28px/1.05 var(--serif);
   margin: 0 0 11px;
 }
 .cost-intro p,
 .cost-card p,
 .prepared p {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.8;
   color: var(--muted);
 }
@@ -811,11 +819,11 @@ img {
   align-items: center;
   gap: 9px;
   color: var(--accent);
-  font-size: 10px;
+  font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 700;
-  margin-top: 8px;
+  margin-top: 14px;
 }
 .text-link:hover {
   color: var(--ink);
@@ -835,7 +843,7 @@ img {
   margin-bottom: 22px;
 }
 .cost-card h4 {
-  font: 600 16px var(--serif);
+  font: 900 20px var(--serif);
   letter-spacing: 0.06em;
   margin: 0 0 9px;
 }
@@ -846,7 +854,7 @@ img {
   max-width: 1240px;
   margin: 17px auto 70px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.7;
 }
 .qa-grid {
@@ -862,7 +870,7 @@ img {
 }
 .question-panel h3,
 .answer-panel h3 {
-  font-size: 37px;
+  font-size: 45px;
   margin: 17px 0 24px;
 }
 .question-panel ul {
@@ -875,7 +883,7 @@ img {
   align-items: flex-start;
   gap: 10px;
   margin: 14px 0;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.6;
   color: var(--muted);
 }
@@ -899,11 +907,11 @@ img {
   border-bottom: 1px solid var(--line);
 }
 .answer-row span {
-  font: 600 16px var(--serif);
+  font: 600 20px var(--serif);
   color: var(--accent);
 }
 .answer-row p {
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.7;
   color: var(--muted);
   margin: 0;
@@ -919,14 +927,14 @@ img {
   align-items: start;
 }
 .prepared h3 {
-  font-size: 30px;
+  font-size: 35px;
   margin-top: 14px;
 }
 .prepared ul {
   margin: 4px 0;
   padding-left: 18px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 16px;
   line-height: 1.9;
 }
 .prepared p {
@@ -981,9 +989,10 @@ img {
 .filter-chip {
   padding: 9px 15px;
   border: 1px solid #ffffff38;
+  border-radius: 10px;
   background: transparent;
   color: #d7cabe;
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.06em;
 }
 .filter-chip:hover,
@@ -1001,6 +1010,7 @@ img {
 }
 .design-card {
   border: 1px solid #ffffff1d;
+  border-radius: 10px;
   background: #ffffff08;
   transition:
     transform 0.3s,
@@ -1052,17 +1062,17 @@ img {
   padding: 19px 20px 22px;
 }
 .design-card-copy small {
-  font-size: 9px;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.17em;
   color: var(--accent-2);
 }
 .design-card-copy h3 {
-  font: 600 22px var(--serif);
+  font: 600 24px var(--serif);
   margin: 6px 0;
 }
 .design-card-copy p {
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.7;
   color: #bdb0a4;
   margin: 0;
@@ -1106,7 +1116,7 @@ img {
 .gallery-disclaimer {
   max-width: 1240px;
   margin: 20px auto 0;
-  font-size: 9px;
+  font-size: 13px;
   color: #93867b;
 }
 .about {
@@ -1125,7 +1135,7 @@ img {
 }
 .about-copy > p,
 .final-dates p {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.9;
   color: var(--muted);
 }
@@ -1135,7 +1145,7 @@ img {
   margin-top: 25px;
 }
 .heritage-signature span {
-  font-size: 13px;
+  font-size: 15px;
 }
 .about-image-wrap {
   height: 490px;
@@ -1187,11 +1197,11 @@ img {
   gap: 8%;
 }
 .services-heading h3 {
-  font-size: 38px;
+  font-size: 40px;
   margin: 17px 0 12px;
 }
 .services-heading p {
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.8;
   color: var(--muted);
   max-width: 300px;
@@ -1207,7 +1217,7 @@ img {
   align-items: center;
   border-bottom: 1px solid var(--line);
   padding: 11px 0;
-  font-size: 11px;
+  font-size: 15px;
   color: var(--ink);
 }
 .service-item span {
@@ -1241,11 +1251,12 @@ img {
   filter: sepia(0.15);
 }
 .final-dates h3 {
-  font-size: 43px;
+  font-size: 45px;
   margin: 17px 0;
 }
 .final-dates p {
   margin: 9px 0;
+  font-size: 18px;
 }
 .final-promise {
   font: italic 18px var(--serif) !important;
@@ -1281,21 +1292,21 @@ img {
   border: 1px solid var(--line);
 }
 .office-label {
-  font-size: 9px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: var(--accent);
   font-weight: 700;
 }
 .office-card h3 {
-  font: 600 24px var(--serif);
+  font: 600 26px var(--serif);
   margin: 8px 0 18px;
 }
 .office-card p {
   display: flex;
   align-items: flex-start;
   gap: 9px;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.7;
   color: var(--muted);
   margin: 10px 0;
@@ -1319,10 +1330,10 @@ img {
   flex-shrink: 0;
 }
 .hours-card strong {
-  font: 600 18px var(--serif);
+  font: 600 20px var(--serif);
 }
 .hours-card p {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.8;
   color: #c6b8a9;
   margin: 8px 0 0;
@@ -1347,14 +1358,14 @@ img {
   align-items: center;
   gap: 5px;
   margin: 11px 3px 5px;
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--accent);
   font-weight: 700;
 }
 .map-wrap small {
-  font-size: 9px;
+  font-size: 11px;
   color: var(--muted);
   line-height: 1.5;
   margin: 0 3px 3px;
@@ -1368,13 +1379,13 @@ img {
   margin-bottom: 22px;
 }
 .form-title > span {
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.17em;
   color: var(--accent);
   font-weight: 700;
 }
 .form-title h3 {
-  font: 600 31px var(--serif);
+  font: 600 33px var(--serif);
   margin: 7px 0;
 }
 .form-row {
@@ -1384,7 +1395,7 @@ img {
 }
 .contact-form label {
   display: block;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.04em;
   color: var(--muted);
   margin-bottom: 13px;
@@ -1415,7 +1426,7 @@ img {
   display: block;
 }
 .file-label > span small {
-  font-size: 9px;
+  font-size: 10px;
 }
 .contact-form input[type="file"] {
   position: absolute;
@@ -1446,7 +1457,7 @@ img {
 .form-note {
   display: block;
   color: var(--muted);
-  font-size: 9px;
+  font-size: 11px;
   line-height: 1.6;
   margin-top: 13px;
 }
@@ -1473,8 +1484,6 @@ img {
   align-items: center;
   gap: 40px;
   border-top: #e5e0e0;
-
-
 }
 .footer .brand-copy {
   color: #f3e9db;
@@ -1498,9 +1507,10 @@ img {
   font: italic 14px var(--serif);
   color: #d4c6b7;
   margin: 9px 0 4px;
+  font-size: 15px;
 }
 .footer-quote small {
-  font-size: 9px;
+  font-size: 15px;
   color: #a99b8c;
 }
 .footer-links,
@@ -1508,7 +1518,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 9px;
-  font-size: 10px;
+  font-size: 15px;
   color: #c8baaa;
 }
 .footer-links a:hover,
@@ -1516,7 +1526,7 @@ img {
   color: var(--accent-2);
 }
 .footer-contact span {
-  font-size: 9px;
+  font-size: 15px;
   color: #95877a;
 }
 .footer-bottom {
@@ -1529,7 +1539,7 @@ img {
   justify-content: space-between;
   gap: 15px;
   color: #988a7d;
-  font-size: 9px;
+  font-size: 15px;
   letter-spacing: 0.03em;
 }
 .footer-bottom a {
@@ -1823,7 +1833,7 @@ img {
     gap: 18px;
   }
   .design-head h2 {
-    font-size: 42px;
+    font-size: 45px;
   }
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
@@ -1838,6 +1848,11 @@ img {
   .design-card-copy h3 {
     font-size: 19px;
   }
+  .design-intro {
+    font-size: 17px; /* Increased from 15px */
+    line-height: 1.6;
+    max-width: 54ch;
+  }
   .design-card-copy p {
     font-size: 9px;
   }
@@ -1846,7 +1861,7 @@ img {
   }
   .filter-chip {
     padding: 8px 10px;
-    font-size: 9px;
+    font-size: 20px;
   }
   .about-top {
     grid-template-columns: 1fr;
