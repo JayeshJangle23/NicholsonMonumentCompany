@@ -1,146 +1,3 @@
-// import React, { useEffect, useRef, useState } from "react";
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import { ArrowRight } from "lucide-react";
-// import ThreeMemorial from "../components/ThreeMemorial.jsx";
-// import { useOutletContext } from "react-router-dom";
-// function SectionEyebrow({ children }) {
-//   return (
-//     <div className="eyebrow">
-//       <span />
-//       {children}
-//       <span />
-//     </div>
-//   );
-// }
-
-// export default function Hero() {
-//   const sectionRef = useRef(null);
-//   const videoRef = useRef(null);
-//   const [videoReady, setVideoReady] = useState(false);
-//   const [videoError, setVideoError] = useState(false);
-//   const { theme } = useOutletContext();
-//   useEffect(() => {
-//     const section = sectionRef.current;
-//     const video = videoRef.current;
-//     if (!section) return;
-//     const ctx = gsap.context(() => {
-//       gsap.from(".hero-content > *", {
-//         y: 28,
-//         opacity: 0,
-//         duration: 1,
-//         stagger: 0.13,
-//         ease: "power3.out",
-//         delay: 0.2,
-//       });
-//       gsap.to(".hero-image", {
-//         scale: 1.08,
-//         ease: "none",
-//         scrollTrigger: {
-//           trigger: section,
-//           start: "top top",
-//           end: "bottom top",
-//           scrub: 1,
-//         },
-//       });
-//       if (
-//         video &&
-//         videoReady &&
-//         Number.isFinite(video.duration) &&
-//         video.duration > 0
-//       ) {
-//         ScrollTrigger.create({
-//           trigger: section,
-//           start: "top top",
-//           end: "+=115%",
-//           pin: true,
-//           anticipatePin: 1,
-//           scrub: true,
-//           onUpdate: (self) => {
-//             if (
-//               videoReady &&
-//               Number.isFinite(video.duration) &&
-//               video.duration > 0
-//             ) {
-//               const target = self.progress * video.duration;
-//               if (Math.abs(video.currentTime - target) > 0.08)
-//                 video.currentTime = target;
-//             }
-//           },
-//         });
-//       }
-//     }, section);
-//     return () => ctx.revert();
-//   }, [videoReady]);
-//   return (
-//     <div>
-//       <section className="hero" id="home" ref={sectionRef}>
-//         <div className="hero-media">
-//           <img
-//             className="hero-image"
-//             src="/images/memorial-story.jpg"
-//             alt="A peaceful memorial garden at sunset"
-//           />
-//           <video
-//             ref={videoRef}
-//             className={
-//               videoReady ? "hero-video hero-video--ready" : "hero-video"
-//             }
-//             muted
-//             playsInline
-//             preload="metadata"
-//             onLoadedMetadata={() => setVideoReady(true)}
-//             onError={() => setVideoError(true)}
-//           >
-//             <source src="/videos/memorial-story.mp4" type="video/mp4" />
-//           </video>
-//           <div className="hero-shade" />
-//         </div>
-//         <div className="hero-content">
-//           <SectionEyebrow>Nicholson Monument Company</SectionEyebrow>
-//           <p className="hero-kicker">Our Family Serving Yours Since 1956</p>
-//           <h1>
-//             Honoring lives.
-//             <br />
-//             <em>Preserving memories.</em>
-//           </h1>
-//           <blockquote>
-//             “Wherever a beautiful soul has been,
-//             <br className="desktop-only" /> there is a trail of beautiful
-//             memories.”<cite>— Ronald Reagan</cite>
-//           </blockquote>
-//           <a className="btn btn--gold" href="/information">
-//             <span className="btn__text">Explore Our Services</span>
-//             <ArrowRight size={17} />
-//           </a>
-//           {/* <span className="hero-caption">
-//           {videoError
-//             ? "A story shaped by generations"
-//             : "Scroll to experience our story"}
-//         </span> */}
-//         </div>
-//         <div className="hero-scroll">
-//           <span />
-//           SCROLL TO EXPLORE
-//         </div>
-//         <div className="hero-stamp">
-//           <span>EST.</span>
-//           <strong>1956</strong>
-//           <small>WESTERN OKLAHOMA</small>
-//         </div>
-//       </section>
-//       {/* <div className="hero-3d">
-//         <ThreeMemorial />
-//       </div> */}
-//       <section id="memorial-studio">
-//         <ThreeMemorial theme={theme} />
-//       </section>
-//     </div>
-//   );
-// }
-
-
-
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
@@ -158,7 +15,7 @@ const services = [
     description:
       "Traditional single and double monuments thoughtfully designed to honor a lifetime of memories.",
     image:
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=900&q=85",
+      'https://static.wixstatic.com/media/b243ab_7e78cb8a20fa47d087654f87b95d3232~mv2.gif/v1/fill/w_426,h_424,q_90,enc_avif,quality_auto/b243ab_7e78cb8a20fa47d087654f87b95d3232~mv2.gif',
     link: "/designs",
   },
   {
@@ -167,7 +24,7 @@ const services = [
     description:
       "Beautifully crafted granite markers that create a lasting place of remembrance.",
     image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&q=85",
+      'https://static.wixstatic.com/media/b243ab_14c68462839246d6a9072b9931f79f55~mv2.gif/v1/fit/w_504,h_360,q_90,enc_avif,quality_auto/b243ab_14c68462839246d6a9072b9931f79f55~mv2.gif',
     link: "/designs",
   },
   {
@@ -176,7 +33,7 @@ const services = [
     description:
       "Personalized artwork, portraits, and meaningful details that tell an individual's story.",
     image:
-      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=900&q=85",
+      'https://static.wixstatic.com/media/b243ab_de2a727d3a2b48e99dcf6b48250cc2d8~mv2.gif/v1/fit/w_360,h_503,q_90,enc_avif,quality_auto/b243ab_de2a727d3a2b48e99dcf6b48250cc2d8~mv2.gif',
     link: "/designs",
   },
   {
@@ -185,7 +42,7 @@ const services = [
     description:
       "Thoughtful memorial options designed to preserve precious memories for generations.",
     image:
-      "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=900&q=85",
+      'https://static.wixstatic.com/media/b243ab_f8a093d77f124b37b6fa1585a01cbfe0~mv2.gif/v1/fit/w_504,h_360,q_90,enc_avif,quality_auto/b243ab_f8a093d77f124b37b6fa1585a01cbfe0~mv2.gif',
     link: "/designs",
   },
   {
@@ -194,7 +51,7 @@ const services = [
     description:
       "Stone straightening, refurbishing, engraving, and restoration to preserve existing monuments.",
     image:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=900&q=85",
+      'https://static.wixstatic.com/media/b243ab_2491b583c7b346c6a6eec543d3b66ec8~mv2.jpeg/v1/fit/w_1790,h_1164,q_90,enc_avif,quality_auto/b243ab_2491b583c7b346c6a6eec543d3b66ec8~mv2.jpeg',
     link: "/about",
   },
   {
@@ -203,7 +60,7 @@ const services = [
     description:
       "Personal touches including vases, benches, bronze plaques, and porcelain photo medallions.",
     image:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=900&q=85",
+      'https://static.wixstatic.com/media/b243ab_e603afca42a54b969308121320f5e68e~mv2.jpeg/v1/fit/w_1790,h_1164,q_90,enc_avif,quality_auto/b243ab_e603afca42a54b969308121320f5e68e~mv2.jpeg',
     link: "/designs",
   },
 ];
@@ -262,7 +119,7 @@ const process = [
   },
 ];
 
-export default function Home({ theme }) {
+export default function Hero({ theme }) {
   const homeRef = useRef(null);
 
   useEffect(() => {
@@ -277,13 +134,75 @@ export default function Home({ theme }) {
 
     const ctx = gsap.context(() => {
       // Hero animation
-      gsap.from(".hero-content > *", {
-        opacity: 0,
-        y: 35,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out",
-      });
+      // gsap.from(".hero-content > *", {
+      //   opacity: 0,
+      //   y: 35,
+      //   duration: 1,
+      //   stagger: 0.2,
+      //   ease: "power3.out",
+      // });
+
+      const heroTimeline = gsap.timeline();
+
+heroTimeline.fromTo(
+  ".hero-eyebrow",
+  {
+    opacity: 0,
+    y: 25,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.8,
+    ease: "power3.out",
+  }
+);
+
+heroTimeline.fromTo(
+  ".hero-content h1",
+  {
+    opacity: 0,
+    y: 35,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+  },
+  "-=0.4"
+);
+
+heroTimeline.fromTo(
+  ".hero-quote",
+  {
+    opacity: 0,
+    y: 25,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.8,
+    ease: "power3.out",
+  },
+  "-=0.5"
+);
+
+heroTimeline.fromTo(
+  ".home-primary-btn",
+  {
+    opacity: 0,
+    y: 20,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.8,
+    ease: "power3.out",
+    clearProps: "opacity,visibility",
+  },
+  "-=0.3"
+);
 
       // Section headings
       gsap.utils.toArray(".home-reveal").forEach((element) => {
@@ -354,16 +273,16 @@ export default function Home({ theme }) {
       });
 
       // Parallax image
-      gsap.to(".legacy-image img", {
-        yPercent: 12,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".legacy-section",
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1,
-        },
-      });
+      // gsap.to(".legacy-image img", {
+      //   yPercent: 12,
+      //   ease: "none",
+      //   scrollTrigger: {
+      //     trigger: ".legacy-section",
+      //     start: "top bottom",
+      //     end: "bottom top",
+      //     scrub: 1,
+      //   },
+      // });
     }, root);
 
     return () => ctx.revert();
@@ -376,7 +295,7 @@ export default function Home({ theme }) {
   };
 
   return (
-    <main className="home-page">
+    <main className="home-page" ref={homeRef}>
       {/* ==================================
           01. HERO
       ================================== */}
@@ -417,7 +336,7 @@ export default function Home({ theme }) {
         </div>
 
         <div className="hero-bottom-note">
-          <span>01 / 07</span>
+          {/* <span>01 / 07</span> */}
           <span>CRAFTING MEMORIES WITH CARE</span>
         </div>
       </section>
@@ -430,7 +349,7 @@ export default function Home({ theme }) {
         <div className="legacy-container">
           <div className="legacy-image">
             <img
-              src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1200&q=85"
+              src="https://images.unsplash.com/photo-1603532543917-8ad5e65c763e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
               alt="Traditional stone craftsmanship"
               loading="lazy"
             />
