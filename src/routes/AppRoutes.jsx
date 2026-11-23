@@ -21,7 +21,7 @@ export default function AppRoutes({ theme, setTheme }) {
           />
         }
       >
-        <Route index element={<Hero />} />
+        <Route index element={<Hero theme={theme}/>} />
         <Route path="/information" element={<Information />} />
         <Route path="/design" element={<Design />} />
         <Route path="/about" element={<About />} />

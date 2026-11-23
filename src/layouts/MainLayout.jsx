@@ -61,7 +61,7 @@ export default function MainLayout({ theme, setTheme }) {
       />
 
       <main>
-        <Outlet />
+        <Outlet context={{ theme, setTheme }}/>
       </main>
 
       <Footer />
