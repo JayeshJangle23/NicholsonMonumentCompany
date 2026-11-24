@@ -38,7 +38,7 @@ export default function Design() {
         </div>
         <a
           className="btn btn--gold"
-          href="https://www.nicholsonmonument.com/designs"
+          href="/design"
           target="_blank"
           rel="noreferrer"
         >

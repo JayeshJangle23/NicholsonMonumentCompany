@@ -794,7 +794,7 @@ img {
 }
 .cost-photo {
   height: 165px;
-  background: url("/images/memorial-story.jpg") center 54% / cover;
+  background: url("./image1.png") center 54% / cover;
   margin-bottom: 23px;
   filter: saturate(0.7);
 }
