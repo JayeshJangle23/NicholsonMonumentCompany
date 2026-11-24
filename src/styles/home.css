@@ -87,8 +87,9 @@
 
   color: white;
 
+ 
   background-image: url(
-    "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=2000&q=90"
+    "https://images.pexels.com/photos/15536978/pexels-photo-15536978.jpeg"
   );
 
   background-position: center 48%;
@@ -119,6 +120,7 @@
 
   position: relative;
   z-index: 2;
+  margin-left: -20px;
 }
 
 .home-page .hero-eyebrow {
