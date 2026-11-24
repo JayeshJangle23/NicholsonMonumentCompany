@@ -88,14 +88,35 @@
   color: white;
 
  
-  background-image: url(
+  /* background-image: url(
     "https://images.pexels.com/photos/15536978/pexels-photo-15536978.jpeg"
+  ); */
+  /* background-image: url(
+    "https://images.pexels.com/photos/31632732/pexels-photo-31632732.jpeg"
+  ); */
+
+  /* background-image: url(
+  https://images.pexels.com/photos/6769872/pexels-photo-6769872.jpeg
+  ); */
+
+  /* background-image: url(
+  https://images.pexels.com/photos/8164055/pexels-photo-8164055.jpeg
+  ); */
+
+  background-image: url(
+    "./image.png"
   );
 
-  background-position: center 48%;
+
+  background-position: center 68%;
   background-size: cover;
   background-repeat: no-repeat;
+  /* transform: scaleX(-1); */
+  /* z-index: -1;  */
 }
+
+
+
 
 .home-page .hero-overlay {
   position: absolute;
@@ -104,9 +125,9 @@
   background:
     linear-gradient(
       90deg,
-          color-mix(in srgb, var(--deep) 82%, transparent),
-      color-mix(in srgb, var(--deep) 42%, transparent) 60%,
-      color-mix(in srgb, var(--deep) 12%, transparent)
+          color-mix(in srgb, var(--deep) 40%, transparent),
+      color-mix(in srgb, var(--deep) 80%, transparent) 30%,
+      color-mix(in srgb, var(--deep) 24%, transparent)
     ),
     linear-gradient(
       0deg,
