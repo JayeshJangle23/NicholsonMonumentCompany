@@ -19,16 +19,6 @@ const graniteOptions = [
 
 const emblemOptions = ["✝", "✦", "❀", "♥"];
 
-const themes = {
-  brown: { accent: "#bd9554", panel: "#f5eee2", ink: "#4a3022" },
-  classic: { accent: "#bd9554", panel: "#f5eee2", ink: "#4a3022" },
-  dark: { accent: "#c7a46a", panel: "#25211d", ink: "#f5eee2" },
-  blue: { accent: "#6489b0", panel: "#edf1f5", ink: "#263b50" },
-  rose: { accent: "#ae6473", panel: "#f5e9eb", ink: "#57313c" },
-  green: { accent: "#728d68", panel: "#edf1e9", ink: "#334a34" },
-  purple: { accent: "#9070b7", panel: "#f0ebf5", ink: "#49375c" },
-};
-
 function getStoneShape(style) {
   const shape = new THREE.Shape();
 
@@ -379,7 +369,7 @@ const layouts = {
   );
 }
 
-export default function ThreeMemorial({ theme = "brown" }) {
+export default function ThreeMemorial() {
   const [granite, setGranite] = useState("Midnight Black");
   const [monumentStyle, setMonumentStyle] = useState("Classic");
   const [emblem, setEmblem] = useState("✝");
@@ -387,17 +377,8 @@ export default function ThreeMemorial({ theme = "brown" }) {
 
 //   const [showEditor, setShowEditor] = useState(false);
 
-  const palette = themes[theme?.toLowerCase()] || themes.brown;
-
   return (
-    <section
-      className="memorial-experience"
-      style={{
-        "--mem-accent": palette.accent,
-        "--mem-panel": palette.panel,
-        "--mem-ink": palette.ink,
-      }}
-    >
+    <section className="memorial-experience">
       <div className="memorial-heading">
         <span>PERSONALIZED MEMORIALS</span>
         <h2>A Lasting Tribute</h2>

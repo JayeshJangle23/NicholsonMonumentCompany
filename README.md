@@ -21,7 +21,7 @@ npm run preview
 ## Included
 
 - Home, Information, Design, About, and Contact sections
-- Six switchable themes (Classic Brown, Elegant Light, Modern Blue, Rose Heritage, Forest Green, Royal Purple); selected theme persists in local storage
+- One consistent Nicholson heritage palette across every page and section
 - Responsive mobile navigation and layouts
 - GSAP entrance animations and scroll-triggered hero parallax
 - Scroll-scrubbed HTML5 video support: place your own licensed MP4 at `public/videos/memorial-story.mp4`. As the visitor scrolls through the hero's scroll range, the video seeks forward; scrolling upward rewinds it. The supplied hero image remains as the visual fallback until a video is added.

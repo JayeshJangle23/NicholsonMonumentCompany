@@ -9,19 +9,11 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import NotFound from "../pages/NotFound";
 
-export default function AppRoutes({ theme, setTheme }) {
+export default function AppRoutes() {
   return (
     <Routes>
-      <Route
-        path="/"
-        element={
-          <MainLayout
-            theme={theme}
-            setTheme={setTheme}
-          />
-        }
-      >
-        <Route index element={<Hero theme={theme}/>} />
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<Hero />} />
         <Route path="/information" element={<Information />} />
         <Route path="/design" element={<Design />} />
         <Route path="/about" element={<About />} />

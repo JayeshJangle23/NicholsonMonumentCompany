@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function MainLayout({ theme, setTheme }) {
+export default function MainLayout() {
   const location = useLocation();
 
   useEffect(() => {
@@ -55,13 +55,10 @@ export default function MainLayout({ theme, setTheme }) {
 
   return (
     <div className="app-shell">
-      <Header
-        theme={theme}
-        setTheme={setTheme}
-      />
+      <Header />
 
       <main>
-        <Outlet context={{ theme, setTheme }}/>
+        <Outlet />
       </main>
 
       <Footer />

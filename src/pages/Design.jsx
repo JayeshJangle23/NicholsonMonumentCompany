@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { designItems } from "../data/content";
 import SectionEyebrow from "../components/SectionEyebrow";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Design() {
   const [active, setActive] = useState(0);
@@ -36,20 +37,16 @@ export default function Design() {
             design can be tailored with meaningful details.
           </p>
         </div>
-        <a
-          className="btn btn--gold"
-          href="/design"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Explore all designs <ArrowUpRight size={16} />
-        </a>
+        <Link className="btn btn--gold" to="/contact">
+          Discuss a design <ArrowUpRight size={16} />
+        </Link>
       </div>
       <div className="filter-row">
         {filters.map((f) => (
           <button
             key={f}
             className={filter === f ? "filter-chip active" : "filter-chip"}
+            aria-pressed={filter === f}
             onClick={() => {
               setFilter(f);
               setActive(0);

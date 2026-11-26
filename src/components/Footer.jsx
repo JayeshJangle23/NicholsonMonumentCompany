@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom";
 import Logo from "./Logo";
 
 export default function Footer() {
@@ -15,10 +16,10 @@ export default function Footer() {
           <small>— Ronald Reagan</small>
         </div>
         <div className="footer-links">
-          <a href="#information">Information</a>
-          <a href="#design">Design galleries</a>
-          <a href="#about">Our story</a>
-          <a href="#contact">Contact</a>
+          <Link to="/information">Information</Link>
+          <Link to="/design">Design galleries</Link>
+          <Link to="/about">Our story</Link>
+          <Link to="/contact">Contact</Link>
         </div>
         <div className="footer-contact">
           <a href="tel:+15803237513">(580) 323-7513</a>
@@ -32,7 +33,7 @@ export default function Footer() {
           reserved.
         </span>
         <span>Crafted with care. Remembered for generations.</span>
-        <a href="#home">Back to top ↑</a>
+        <Link to="/">Back to top ↑</Link>
       </div>
     </footer>
   );
